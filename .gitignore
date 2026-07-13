@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+
+# Data and generated model artifacts
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+*.joblib
+*.pkl
+*.pickle
+*.cbm
+*.onnx
+*.pt
+*.pth
+*.h5
+*.hdf5
+
+model_output/
+results/
+catboost_info/
