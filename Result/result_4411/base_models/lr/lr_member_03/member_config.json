@@ -1,0 +1,12 @@
+{
+  "member_id": "lr_member_03",
+  "family": "lr",
+  "display_name": "lr_auc_seed62_high_c",
+  "seed": 62,
+  "solver": "liblinear",
+  "c_value": 0.6,
+  "penalty": "l1",
+  "fit_intercept": true,
+  "class_weight": null,
+  "sampling_ratio": 0.25
+}

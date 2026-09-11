@@ -1,0 +1,27 @@
+{
+  "method": "fixed_equal_family_weights",
+  "selection_dataset": "tuning",
+  "weights": {
+    "xgb": 0.5,
+    "lr": 0.5,
+    "cat": 0.0
+  },
+  "threshold": 0.16,
+  "tuning_metrics": {
+    "ROC AUC": 0.6757905926122775,
+    "AP": 0.28750405591469985,
+    "Accuracy": 0.5667655786350149,
+    "Balanced Acc": 0.6738971565240499,
+    "Precision": 0.2430939226519337,
+    "Recall": 0.8301886792452831,
+    "Specificity": 0.5176056338028169,
+    "F1": 0.37606837606837606,
+    "F2": 0.5597964376590332,
+    "MCC": 0.2539323282153957,
+    "threshold": 0.16,
+    "tp": 44,
+    "fp": 137,
+    "tn": 147,
+    "fn": 9
+  }
+}

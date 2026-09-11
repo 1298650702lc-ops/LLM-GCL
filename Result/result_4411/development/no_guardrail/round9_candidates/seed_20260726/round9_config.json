@@ -1,0 +1,39 @@
+{
+  "method": "bayesian_optimization",
+  "selection_dataset": "tuning",
+  "candidate_discovery_dataset": "tuning",
+  "candidate_pool_size": 40,
+  "rule": {
+    "feature": "右肺下叶",
+    "rule_type": "numeric_gt",
+    "split_value": 0.0,
+    "rule_label": "右肺下叶 > 0.0000",
+    "source_comparison": "FP_vs_TN",
+    "display_rule_label": "右肺下叶 > 0.0000"
+  },
+  "threshold_group": 0.39424554644756243,
+  "threshold_other": 0.48595487930852305,
+  "threshold": 0.3,
+  "stability": {
+    "stability_mean_auc": 0.709681400470874,
+    "stability_std_auc": 0.08973676903113127,
+    "stability_score": 0.7007077235677609
+  },
+  "tuning_metrics": {
+    "ROC AUC": 0.710536805740101,
+    "AP": 0.33981375810038483,
+    "Accuracy": 0.543026706231454,
+    "Balanced Acc": 0.6905062450172734,
+    "Precision": 0.2436548223350254,
+    "Recall": 0.9056603773584906,
+    "Specificity": 0.4753521126760563,
+    "F1": 0.384,
+    "F2": 0.5867970660146701,
+    "MCC": 0.28147458435352185,
+    "threshold": 0.3,
+    "tp": 48,
+    "fp": 149,
+    "tn": 135,
+    "fn": 5
+  }
+}

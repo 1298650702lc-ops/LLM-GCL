@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "llm-gcl-paper-model"
-version = "1.0.0"
-description = "Standalone implementation of the formal LLM-GCL model reported in the paper"
+version = "2.0.0"
+description = "Standalone implementation of the final 4:4:1:1 LLM-GCL model"
 requires-python = ">=3.11"
 dependencies = [
   "numpy==2.1.3",

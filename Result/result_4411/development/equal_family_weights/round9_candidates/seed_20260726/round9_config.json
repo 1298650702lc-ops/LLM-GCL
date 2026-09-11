@@ -1,0 +1,39 @@
+{
+  "method": "bayesian_optimization",
+  "selection_dataset": "tuning",
+  "candidate_discovery_dataset": "tuning",
+  "candidate_pool_size": 44,
+  "rule": {
+    "feature": "bmi",
+    "rule_type": "numeric_gt",
+    "split_value": 21.09375,
+    "rule_label": "bmi > 21.0938",
+    "source_comparison": "FN_vs_TP",
+    "display_rule_label": "BMI > 21.0938"
+  },
+  "threshold_group": 0.27594193593477645,
+  "threshold_other": 0.1484086547291253,
+  "threshold": 0.34,
+  "stability": {
+    "stability_mean_auc": 0.6953362573099415,
+    "stability_std_auc": 0.11556552844376225,
+    "stability_score": 0.6837797044655654
+  },
+  "tuning_metrics": {
+    "ROC AUC": 0.6944592080786607,
+    "AP": 0.29058006003290476,
+    "Accuracy": 0.5074183976261127,
+    "Balanced Acc": 0.6540326866861547,
+    "Precision": 0.22439024390243903,
+    "Recall": 0.8679245283018868,
+    "Specificity": 0.44014084507042256,
+    "F1": 0.35658914728682173,
+    "F2": 0.5515587529976019,
+    "MCC": 0.22976088476029033,
+    "threshold": 0.34,
+    "tp": 46,
+    "fp": 159,
+    "tn": 125,
+    "fn": 7
+  }
+}

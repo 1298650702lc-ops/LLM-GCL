@@ -1,0 +1,14 @@
+{
+  "member_id": "cat_member_02",
+  "family": "cat",
+  "display_name": "cat_seed52_depth4",
+  "seed": 52,
+  "sampling_ratio": 1.0,
+  "params": {
+    "depth": 4,
+    "learning_rate": 0.03,
+    "l2_leaf_reg": 10.0,
+    "random_strength": 1.5,
+    "bagging_temperature": 1.0
+  }
+}

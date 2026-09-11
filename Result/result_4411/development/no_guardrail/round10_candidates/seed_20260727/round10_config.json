@@ -1,0 +1,49 @@
+{
+  "method": "bayesian_optimization",
+  "selection_dataset": "tuning",
+  "candidate_discovery_dataset": "tuning",
+  "primary_pool_size": 101,
+  "aux_pool_size": 39,
+  "primary_rule": {
+    "feature": "体重",
+    "rule_type": "numeric_gt",
+    "split_value": 56.0,
+    "rule_label": "体重 > 56.0000",
+    "source_comparison": "FN_vs_TP",
+    "display_rule_label": "体重 > 56.0000"
+  },
+  "aux_rule": {
+    "feature": "性别",
+    "rule_type": "categorical_ne",
+    "split_value": "男",
+    "rule_label": "性别 != 男",
+    "source_comparison": "FP_vs_TN",
+    "display_rule_label": "性别 != 男"
+  },
+  "threshold_primary_aux": 0.20696039371251235,
+  "threshold_primary_base": 0.4268201716062114,
+  "threshold_other": 0.15271501729548653,
+  "threshold": 0.6455209733304869,
+  "stability": {
+    "stability_mean_auc": 0.7093039416723627,
+    "stability_std_auc": 0.11055814930225175,
+    "stability_score": 0.6982481267421374
+  },
+  "tuning_metrics": {
+    "ROC AUC": 0.7074142971033749,
+    "AP": 0.3502271602281826,
+    "Accuracy": 0.5756676557863502,
+    "Balanced Acc": 0.6638320488971565,
+    "Precision": 0.2413793103448276,
+    "Recall": 0.7924528301886793,
+    "Specificity": 0.5352112676056338,
+    "F1": 0.3700440528634361,
+    "F2": 0.5440414507772021,
+    "MCC": 0.2387028128703296,
+    "threshold": 0.6455209733304869,
+    "tp": 42,
+    "fp": 132,
+    "tn": 152,
+    "fn": 11
+  }
+}

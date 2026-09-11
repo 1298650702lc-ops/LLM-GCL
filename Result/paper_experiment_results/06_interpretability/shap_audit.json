@@ -1,0 +1,134 @@
+{
+  "explained_model": "fixed_upstream_fusion",
+  "members": [
+    "xgb_member_04",
+    "lr_member_01"
+  ],
+  "weights": {
+    "xgb": 0.5536180767491298,
+    "lr": 0.4463819232508702
+  },
+  "background_dataset": "train",
+  "background_size": 64,
+  "explained_dataset": "test",
+  "explained_sample_size": 85,
+  "feature_count": 20,
+  "explainer": "shap.PermutationExplainer",
+  "shap_version": "0.50.0",
+  "random_state": 20260817,
+  "max_evals": 201,
+  "saved_probability_max_error": 0.0,
+  "additivity_max_error": 2.2891646356271167e-09,
+  "top_10_features": [
+    {
+      "rank": 1,
+      "feature_chinese": "性别",
+      "feature_english": "Sex (male = 1)",
+      "mean_abs_shap": 0.08155662317663011,
+      "mean_shap": -0.00990844240399589,
+      "median_abs_shap": 0.07165461582072022,
+      "test_unique_values": 2,
+      "test_min": 0.0,
+      "test_max": 1.0
+    },
+    {
+      "rank": 2,
+      "feature_chinese": "右肺下叶",
+      "feature_english": "Right lower lobe",
+      "mean_abs_shap": 0.008737188921294888,
+      "mean_shap": -0.00013479805549376344,
+      "median_abs_shap": 0.008020668391411773,
+      "test_unique_values": 2,
+      "test_min": 0.0,
+      "test_max": 1.0
+    },
+    {
+      "rank": 3,
+      "feature_chinese": "bmi",
+      "feature_english": "BMI",
+      "mean_abs_shap": 0.004409636839042274,
+      "mean_shap": 0.0015198427009723051,
+      "median_abs_shap": 0.0036951316944243877,
+      "test_unique_values": 74,
+      "test_min": 16.9550173,
+      "test_max": 33.984375
+    },
+    {
+      "rank": 4,
+      "feature_chinese": "放化疗史",
+      "feature_english": "Radiotherapy/chemotherapy history",
+      "mean_abs_shap": 0.004044155437266853,
+      "mean_shap": 0.004044155437266853,
+      "median_abs_shap": 0.0,
+      "test_unique_values": 2,
+      "test_min": 0.0,
+      "test_max": 1.0
+    },
+    {
+      "rank": 5,
+      "feature_chinese": "左肺下叶",
+      "feature_english": "Left lower lobe",
+      "mean_abs_shap": 0.003982174622006802,
+      "mean_shap": 0.0011075932725393498,
+      "median_abs_shap": 0.0018102683676342157,
+      "test_unique_values": 2,
+      "test_min": 0.0,
+      "test_max": 1.0
+    },
+    {
+      "rank": 6,
+      "feature_chinese": "右肺上叶",
+      "feature_english": "Right upper lobe",
+      "mean_abs_shap": 0.003772837742083786,
+      "mean_shap": -0.0010010418767646152,
+      "median_abs_shap": 0.003230479978378767,
+      "test_unique_values": 2,
+      "test_min": 0.0,
+      "test_max": 1.0
+    },
+    {
+      "rank": 7,
+      "feature_chinese": "右肺中叶",
+      "feature_english": "Right middle lobe",
+      "mean_abs_shap": 0.003016340711629605,
+      "mean_shap": 0.0004071660264734802,
+      "median_abs_shap": 0.00241285961461577,
+      "test_unique_values": 2,
+      "test_min": 0.0,
+      "test_max": 1.0
+    },
+    {
+      "rank": 8,
+      "feature_chinese": "肺部手术史",
+      "feature_english": "History of pulmonary surgery",
+      "mean_abs_shap": 0.0028857638239487356,
+      "mean_shap": -0.0006944573859705951,
+      "median_abs_shap": 0.0012669238514790959,
+      "test_unique_values": 2,
+      "test_min": 0.0,
+      "test_max": 1.0
+    },
+    {
+      "rank": 9,
+      "feature_chinese": "胸部外伤史",
+      "feature_english": "History of chest trauma",
+      "mean_abs_shap": 0.0020408775890966564,
+      "mean_shap": -0.00024632364047801286,
+      "median_abs_shap": 0.001026270125065004,
+      "test_unique_values": 2,
+      "test_min": 0.0,
+      "test_max": 1.0
+    },
+    {
+      "rank": 10,
+      "feature_chinese": "体重",
+      "feature_english": "Weight",
+      "mean_abs_shap": 0.0020283856063829458,
+      "mean_shap": 0.0010643267271678912,
+      "median_abs_shap": 0.0024367795092985036,
+      "test_unique_values": 30,
+      "test_min": 43.0,
+      "test_max": 95.0
+    }
+  ]
+}

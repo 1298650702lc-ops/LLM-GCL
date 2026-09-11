@@ -1,0 +1,66 @@
+{
+  "started_at": "2026-08-04T12:49:04.402073+00:00",
+  "completed_at": "2026-08-04T12:55:22.045123+00:00",
+  "experiment": "4411",
+  "output_dir": "D:\\deep\\DF\\Cascade learning\\test\\auto\\4411\\result_4411",
+  "python": "3.13.0 | packaged by conda-forge | (main, Nov 27 2024, 19:03:49) [MSC v.1942 64 bit (AMD64)]",
+  "source_hashes": {
+    "internal": "5b967742142c83a286b33883e6e815e204c8230a9dfd274db2e9a592cf9d217b",
+    "external": "2d164939e78ff9f1904b02a4dfb1ad493906de8af9983140181418ac1c6bf8a6"
+  },
+  "split_summary": [
+    {
+      "dataset_role": "train",
+      "n": 337,
+      "positive": 53,
+      "negative": 284,
+      "positive_rate": 0.1572700296735905,
+      "split_seed": 20260419
+    },
+    {
+      "dataset_role": "tuning",
+      "n": 337,
+      "positive": 53,
+      "negative": 284,
+      "positive_rate": 0.1572700296735905,
+      "split_seed": 20260419
+    },
+    {
+      "dataset_role": "validation",
+      "n": 85,
+      "positive": 13,
+      "negative": 72,
+      "positive_rate": 0.15294117647058825,
+      "split_seed": 20260418
+    },
+    {
+      "dataset_role": "test",
+      "n": 85,
+      "positive": 13,
+      "negative": 72,
+      "positive_rate": 0.15294117647058825,
+      "split_seed": 20260417
+    }
+  ],
+  "selected_members": {
+    "xgb": [
+      "xgb_member_04"
+    ],
+    "lr": [
+      "lr_member_01"
+    ],
+    "cat": []
+  },
+  "full_terminal_stage": "round9",
+  "variant_count": 8,
+  "protected_evaluation_after_freeze": true,
+  "figures_generated": false,
+  "tables_generated": [
+    "reports\\ablation_terminal_metrics.csv",
+    "reports\\all_stage_metrics.csv",
+    "reports\\baseline_comparison.csv",
+    "reports\\full_model_bootstrap_auc.csv",
+    "reports\\selection_ledger.csv",
+    "reports\\stage_decisions.csv"
+  ]
+}

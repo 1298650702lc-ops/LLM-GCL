@@ -1,0 +1,17 @@
+{
+  "suite": "paper_experiment_completion_20260817",
+  "workspace": "D:\\deep\\DF\\Cascade learning",
+  "frozen_source": "D:\\deep\\DF\\Cascade learning\\test\\auto\\4411\\result_4411",
+  "results_root": "D:\\deep\\DF\\Cascade learning\\test\\auto\\4411\\paper_experiment_completion_20260817\\results",
+  "python": "3.13.0 | packaged by conda-forge | (main, Nov 27 2024, 19:03:49) [MSC v.1942 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "random_state": 20260817,
+  "bootstrap_iterations": 1000,
+  "data_roles": {
+    "train": "base learner fitting",
+    "tuning": "all additional fitting and search",
+    "validation": "Guardrail member selection only",
+    "test": "protected internal evaluation",
+    "external": "protected external evaluation"
+  }
+}

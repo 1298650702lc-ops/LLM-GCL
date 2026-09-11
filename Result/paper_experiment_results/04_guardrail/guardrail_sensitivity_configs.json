@@ -1,0 +1,212 @@
+{
+  "guardrail": {
+    "selected_members": {
+      "xgb": [
+        "xgb_member_04"
+      ],
+      "lr": [
+        "lr_member_01"
+      ],
+      "cat": []
+    },
+    "family_weights": {
+      "xgb": 0.5536180767491298,
+      "lr": 0.4463819232508702,
+      "cat": 0.0
+    },
+    "weight_mode": "current",
+    "error_pattern_correction": {
+      "rule": {
+        "feature": "体重",
+        "rule_type": "numeric_gt",
+        "split_value": 58.0,
+        "rule_label": "体重 > 58.0000",
+        "source_comparison": "FN_vs_TP",
+        "display_rule_label": "体重 > 58.0000"
+      },
+      "threshold_group": 0.3228927810673956,
+      "threshold_other": 0.2094046412245567,
+      "threshold": 0.3
+    }
+  },
+  "all_13_family_means": {
+    "selected_members": {
+      "xgb": [
+        "xgb_member_01",
+        "xgb_member_02",
+        "xgb_member_03",
+        "xgb_member_04",
+        "xgb_member_05"
+      ],
+      "lr": [
+        "lr_member_01",
+        "lr_member_02",
+        "lr_member_03",
+        "lr_member_04"
+      ],
+      "cat": [
+        "cat_member_01",
+        "cat_member_02",
+        "cat_member_03",
+        "cat_member_04"
+      ]
+    },
+    "family_weights": {
+      "xgb": 0.3333333333333333,
+      "lr": 0.3333333333333333,
+      "cat": 0.3333333333333333
+    },
+    "weight_mode": "equal_families",
+    "error_pattern_correction": {
+      "rule": {
+        "feature": "bmi",
+        "rule_type": "numeric_gt",
+        "split_value": 21.09375,
+        "rule_label": "bmi > 21.0938",
+        "source_comparison": "FN_vs_TP"
+      },
+      "threshold_group": 0.2547838497627297,
+      "threshold_other": 0.1920395199045763,
+      "threshold": 0.51,
+      "objective": 0.839570753602708
+    }
+  },
+  "all_13_equal_mean": {
+    "selected_members": {
+      "xgb": [
+        "xgb_member_01",
+        "xgb_member_02",
+        "xgb_member_03",
+        "xgb_member_04",
+        "xgb_member_05"
+      ],
+      "lr": [
+        "lr_member_01",
+        "lr_member_02",
+        "lr_member_03",
+        "lr_member_04"
+      ],
+      "cat": [
+        "cat_member_01",
+        "cat_member_02",
+        "cat_member_03",
+        "cat_member_04"
+      ]
+    },
+    "family_weights": {
+      "xgb": 0.38461538461538464,
+      "lr": 0.3076923076923077,
+      "cat": 0.3076923076923077
+    },
+    "weight_mode": "equal_members",
+    "error_pattern_correction": {
+      "rule": {
+        "feature": "体重",
+        "rule_type": "numeric_gt",
+        "split_value": 58.0,
+        "rule_label": "体重 > 58.0000",
+        "source_comparison": "FN_vs_TP"
+      },
+      "threshold_group": 0.48592322885070544,
+      "threshold_other": 0.38764399217808104,
+      "threshold": 0.26,
+      "objective": 0.8406981627763699
+    }
+  },
+  "single_metric_auroc": {
+    "selected_members": {
+      "xgb": [
+        "xgb_member_01"
+      ],
+      "lr": [
+        "lr_member_01"
+      ],
+      "cat": [
+        "cat_member_01"
+      ]
+    },
+    "family_weights": {
+      "xgb": 0.0,
+      "lr": 0.0,
+      "cat": 1.0
+    },
+    "weight_mode": "optimized",
+    "error_pattern_correction": {
+      "rule": {
+        "feature": "bmi",
+        "rule_type": "numeric_le",
+        "split_value": 21.09375,
+        "rule_label": "bmi <= 21.0938",
+        "source_comparison": "FP_vs_TN"
+      },
+      "threshold_group": 0.32483605944813443,
+      "threshold_other": 0.4088683025610048,
+      "threshold": 0.5,
+      "objective": 0.8526855287702015
+    }
+  },
+  "single_metric_f2": {
+    "selected_members": {
+      "xgb": [
+        "xgb_member_03"
+      ],
+      "lr": [
+        "lr_member_02"
+      ],
+      "cat": [
+        "cat_member_01"
+      ]
+    },
+    "family_weights": {
+      "xgb": 0.0,
+      "lr": 0.0,
+      "cat": 1.0
+    },
+    "weight_mode": "optimized",
+    "error_pattern_correction": {
+      "rule": {
+        "feature": "年龄",
+        "rule_type": "numeric_le",
+        "split_value": 68.0,
+        "rule_label": "年龄 <= 68.0000",
+        "source_comparison": "FN_vs_TP"
+      },
+      "threshold_group": 0.23090578801181905,
+      "threshold_other": 0.2843259359616507,
+      "threshold": 0.75,
+      "objective": 0.8575464530582328
+    }
+  },
+  "single_metric_recall": {
+    "selected_members": {
+      "xgb": [
+        "xgb_member_01"
+      ],
+      "lr": [
+        "lr_member_01"
+      ],
+      "cat": [
+        "cat_member_01"
+      ]
+    },
+    "family_weights": {
+      "xgb": 0.0,
+      "lr": 0.0,
+      "cat": 1.0
+    },
+    "weight_mode": "optimized",
+    "error_pattern_correction": {
+      "rule": {
+        "feature": "bmi",
+        "rule_type": "numeric_le",
+        "split_value": 21.09375,
+        "rule_label": "bmi <= 21.0938",
+        "source_comparison": "FP_vs_TN"
+      },
+      "threshold_group": 0.23452325474788172,
+      "threshold_other": 0.29558377723068374,
+      "threshold": 0.62,
+      "objective": 0.855521504675031
+    }
+  }
+}

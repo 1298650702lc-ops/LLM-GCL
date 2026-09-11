@@ -1,0 +1,13 @@
+﻿operation,dataset_role,uses_labels,may_select_parameters
+base_model_fit,train,1,1
+base_internal_cv_no_oof_output,train,1,1
+guardrail_member_selection,validation,1,1
+upstream_bo,tuning,1,1
+round8_bo,tuning,1,1
+candidate_rule_discovery,tuning,1,1
+round9_bo,tuning,1,1
+round10_bo,tuning,1,1
+primary_only_bo,tuning,1,1
+validation_descriptive_after_guardrail,validation,1,0
+frozen_test,test,1,0
+frozen_external,external,1,0

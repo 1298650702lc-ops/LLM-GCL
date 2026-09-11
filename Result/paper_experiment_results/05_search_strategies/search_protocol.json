@@ -1,0 +1,16 @@
+{
+  "base_candidate_count": 44,
+  "expanded_candidate_count": 228,
+  "bayesian_budget": {
+    "initial": 12,
+    "iterations": 48,
+    "total": 60
+  },
+  "genetic_budget": {
+    "population": 12,
+    "generations_after_initial": 4,
+    "total": 60
+  },
+  "selection_dataset": "tuning",
+  "protected_labels_used_for_selection": false
+}

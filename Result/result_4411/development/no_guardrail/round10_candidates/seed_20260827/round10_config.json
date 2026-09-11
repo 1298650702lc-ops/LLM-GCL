@@ -1,0 +1,49 @@
+{
+  "method": "bayesian_optimization",
+  "selection_dataset": "tuning",
+  "candidate_discovery_dataset": "tuning",
+  "primary_pool_size": 101,
+  "aux_pool_size": 39,
+  "primary_rule": {
+    "feature": "体重",
+    "rule_type": "numeric_gt",
+    "split_value": 57.0,
+    "rule_label": "体重 > 57.0000",
+    "source_comparison": "FN_vs_TP",
+    "display_rule_label": "体重 > 57.0000"
+  },
+  "aux_rule": {
+    "feature": "甲状腺手术史",
+    "rule_type": "numeric_le",
+    "split_value": 0.0,
+    "rule_label": "甲状腺手术史 <= 0.0000",
+    "source_comparison": "FN_vs_TP",
+    "display_rule_label": "甲状腺手术史 <= 0.0000"
+  },
+  "threshold_primary_aux": 0.27282329282232837,
+  "threshold_primary_base": 0.1894788696416787,
+  "threshold_other": 0.20678498589544142,
+  "threshold": 0.6196803987140558,
+  "stability": {
+    "stability_mean_auc": 0.7022913343965975,
+    "stability_std_auc": 0.1084339786405881,
+    "stability_score": 0.6914479365325387
+  },
+  "tuning_metrics": {
+    "ROC AUC": 0.7029630613871911,
+    "AP": 0.32255909323968784,
+    "Accuracy": 0.6053412462908012,
+    "Balanced Acc": 0.6814376826999735,
+    "Precision": 0.25609756097560976,
+    "Recall": 0.7924528301886793,
+    "Specificity": 0.5704225352112676,
+    "F1": 0.3870967741935484,
+    "F2": 0.5585106382978724,
+    "MCC": 0.264307578220762,
+    "threshold": 0.6196803987140558,
+    "tp": 42,
+    "fp": 122,
+    "tn": 162,
+    "fn": 11
+  }
+}

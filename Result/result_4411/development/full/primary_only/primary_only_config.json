@@ -1,0 +1,39 @@
+{
+  "definition": "frozen full-model Round10 primary rule with auxiliary rule removed",
+  "selection_dataset": "tuning",
+  "primary_rule": {
+    "feature": "体重",
+    "rule_type": "numeric_gt",
+    "split_value": 67.5,
+    "rule_label": "体重 > 67.5000",
+    "source_comparison": "FN_vs_TP",
+    "display_rule_label": "体重 > 67.5000"
+  },
+  "threshold_primary": 0.12204982556386976,
+  "threshold_other": 0.12507419001061454,
+  "threshold": 0.5912346137757031,
+  "group_counts": {
+    "primary_n": 148,
+    "primary_positive": 18,
+    "other_n": 189,
+    "other_positive": 35
+  },
+  "tuning_metrics": {
+    "ROC AUC": 0.6785144831251662,
+    "AP": 0.29246621083796587,
+    "Accuracy": 0.5667655786350149,
+    "Balanced Acc": 0.6738971565240499,
+    "Precision": 0.2430939226519337,
+    "Recall": 0.8301886792452831,
+    "Specificity": 0.5176056338028169,
+    "F1": 0.37606837606837606,
+    "F2": 0.5597964376590332,
+    "MCC": 0.2539323282153957,
+    "threshold": 0.5912346137757031,
+    "tp": 44,
+    "fp": 137,
+    "tn": 147,
+    "fn": 9
+  },
+  "search_seed": 20260627
+}

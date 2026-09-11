@@ -1,0 +1,39 @@
+{
+  "method": "bayesian_optimization",
+  "selection_dataset": "tuning",
+  "candidate_discovery_dataset": "tuning",
+  "candidate_pool_size": 44,
+  "rule": {
+    "feature": "体重",
+    "rule_type": "numeric_gt",
+    "split_value": 58.0,
+    "rule_label": "体重 > 58.0000",
+    "source_comparison": "FN_vs_TP",
+    "display_rule_label": "体重 > 58.0000"
+  },
+  "threshold_group": 0.3228927810673956,
+  "threshold_other": 0.2094046412245567,
+  "threshold": 0.29,
+  "stability": {
+    "stability_mean_auc": 0.6974274701906282,
+    "stability_std_auc": 0.12034141252039157,
+    "stability_score": 0.6853933289385891
+  },
+  "tuning_metrics": {
+    "ROC AUC": 0.695455753388254,
+    "AP": 0.30048781937035013,
+    "Accuracy": 0.5578635014836796,
+    "Balanced Acc": 0.6762888652670742,
+    "Precision": 0.24193548387096775,
+    "Recall": 0.8490566037735849,
+    "Specificity": 0.5035211267605634,
+    "F1": 0.37656903765690375,
+    "F2": 0.5653266331658291,
+    "MCC": 0.25811131121314795,
+    "threshold": 0.29,
+    "tp": 45,
+    "fp": 141,
+    "tn": 143,
+    "fn": 8
+  }
+}

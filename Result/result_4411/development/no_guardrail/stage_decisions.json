@@ -1,0 +1,237 @@
+[
+  {
+    "variant": "no_guardrail",
+    "stage": "round8",
+    "accepted": false,
+    "decision": "reject_and_keep_simpler_stage",
+    "reasons": [
+      "bootstrap_support_too_low"
+    ],
+    "baseline_objective": 0.8244217823688229,
+    "candidate_objective": 0.827450055629161,
+    "objective_gain": 0.0030282732603380547,
+    "bootstrap_improvement_probability": 0.671,
+    "bootstrap_objective_median_delta": 0.0026450105195891527,
+    "seed_support": 3,
+    "seed_count": 3,
+    "seed_results": [
+      {
+        "seed_index": 0,
+        "objective": 0.827450055629161,
+        "objective_gain": 0.0030282732603380547,
+        "ROC AUC": 0.6951235716183896,
+        "AP": 0.31444127566765556,
+        "F2": 0.5653266331658291,
+        "MCC": 0.25811131121314795,
+        "Recall": 0.8490566037735849
+      },
+      {
+        "seed_index": 1,
+        "objective": 0.8289996172235263,
+        "objective_gain": 0.004577834854703422,
+        "ROC AUC": 0.6944592080786607,
+        "AP": 0.3175287402013251,
+        "F2": 0.5739795918367347,
+        "MCC": 0.2727340384185437,
+        "Recall": 0.8490566037735849
+      },
+      {
+        "seed_index": 2,
+        "objective": 0.827792173603298,
+        "objective_gain": 0.003370391234475134,
+        "ROC AUC": 0.6938612808929046,
+        "AP": 0.31448115802896387,
+        "F2": 0.5739795918367347,
+        "MCC": 0.2727340384185437,
+        "Recall": 0.8490566037735849
+      }
+    ],
+    "metric_checks": {
+      "ROC AUC": {
+        "median_delta": 0.0032553813446718483,
+        "degradation_probability": 0.256,
+        "significant_degradation": false
+      },
+      "AP": {
+        "median_delta": 0.0019372030458993383,
+        "degradation_probability": 0.18,
+        "significant_degradation": false
+      },
+      "F2": {
+        "median_delta": -0.00589913711608453,
+        "degradation_probability": 0.934,
+        "significant_degradation": false
+      },
+      "MCC": {
+        "median_delta": -0.009861614997223322,
+        "degradation_probability": 0.934,
+        "significant_degradation": false
+      }
+    },
+    "criteria": {
+      "minimum_objective_gain": 0.002,
+      "minimum_improvement_probability": 0.75,
+      "minimum_seed_support": 2,
+      "metric_drop_margin": 0.02,
+      "metric_drop_probability": 0.8,
+      "bootstrap_replicates": 1000
+    }
+  },
+  {
+    "variant": "no_guardrail",
+    "stage": "round9",
+    "accepted": false,
+    "decision": "reject_and_keep_simpler_stage",
+    "reasons": [
+      "bootstrap_support_too_low"
+    ],
+    "baseline_objective": 0.8244217823688229,
+    "candidate_objective": 0.8460718403224047,
+    "objective_gain": 0.02165005795358177,
+    "bootstrap_improvement_probability": 0.71,
+    "bootstrap_objective_median_delta": 0.019926534575513688,
+    "seed_support": 3,
+    "seed_count": 3,
+    "seed_results": [
+      {
+        "seed_index": 0,
+        "objective": 0.8460718403224047,
+        "objective_gain": 0.02165005795358177,
+        "ROC AUC": 0.7053547701302152,
+        "AP": 0.33850040223155997,
+        "F2": 0.589622641509434,
+        "MCC": 0.28109451189868123,
+        "Recall": 0.9433962264150944
+      },
+      {
+        "seed_index": 1,
+        "objective": 0.8512529931793211,
+        "objective_gain": 0.02683121081049822,
+        "ROC AUC": 0.710536805740101,
+        "AP": 0.33981375810038483,
+        "F2": 0.5867970660146701,
+        "MCC": 0.28147458435352185,
+        "Recall": 0.9056603773584906
+      },
+      {
+        "seed_index": 2,
+        "objective": 0.8481022300487193,
+        "objective_gain": 0.02368044767989641,
+        "ROC AUC": 0.7077464788732395,
+        "AP": 0.34059170220441143,
+        "F2": 0.583941605839416,
+        "MCC": 0.27686500301311884,
+        "Recall": 0.9056603773584906
+      }
+    ],
+    "metric_checks": {
+      "ROC AUC": {
+        "median_delta": 0.013652670741429673,
+        "degradation_probability": 0.291,
+        "significant_degradation": false
+      },
+      "AP": {
+        "median_delta": 0.018506203434875163,
+        "degradation_probability": 0.309,
+        "significant_degradation": false
+      },
+      "F2": {
+        "median_delta": 0.01646194321677913,
+        "degradation_probability": 0.246,
+        "significant_degradation": false
+      },
+      "MCC": {
+        "median_delta": 0.009911098523842657,
+        "degradation_probability": 0.385,
+        "significant_degradation": false
+      }
+    },
+    "criteria": {
+      "minimum_objective_gain": 0.002,
+      "minimum_improvement_probability": 0.75,
+      "minimum_seed_support": 2,
+      "metric_drop_margin": 0.02,
+      "metric_drop_probability": 0.8,
+      "bootstrap_replicates": 1000
+    }
+  },
+  {
+    "variant": "no_guardrail",
+    "stage": "round10",
+    "accepted": false,
+    "decision": "reject_and_keep_simpler_stage",
+    "reasons": [
+      "bootstrap_support_too_low",
+      "core_metric_degradation"
+    ],
+    "baseline_objective": 0.8244217823688229,
+    "candidate_objective": 0.8369490841813746,
+    "objective_gain": 0.012527301812551683,
+    "bootstrap_improvement_probability": 0.619,
+    "bootstrap_objective_median_delta": 0.00977806346471205,
+    "seed_support": 3,
+    "seed_count": 3,
+    "seed_results": [
+      {
+        "seed_index": 0,
+        "objective": 0.8369490841813746,
+        "objective_gain": 0.012527301812551683,
+        "ROC AUC": 0.7074807334573479,
+        "AP": 0.31161680894977073,
+        "F2": 0.5483028720626631,
+        "MCC": 0.24629403455612686,
+        "Recall": 0.7924528301886793
+      },
+      {
+        "seed_index": 1,
+        "objective": 0.8437990148702481,
+        "objective_gain": 0.0193772325014252,
+        "ROC AUC": 0.7074142971033749,
+        "AP": 0.3502271602281826,
+        "F2": 0.5440414507772021,
+        "MCC": 0.2387028128703296,
+        "Recall": 0.7924528301886793
+      },
+      {
+        "seed_index": 2,
+        "objective": 0.8365413227759539,
+        "objective_gain": 0.012119540407131035,
+        "ROC AUC": 0.7029630613871911,
+        "AP": 0.32255909323968784,
+        "F2": 0.5585106382978724,
+        "MCC": 0.264307578220762,
+        "Recall": 0.7924528301886793
+      }
+    ],
+    "metric_checks": {
+      "ROC AUC": {
+        "median_delta": 0.014383470635131457,
+        "degradation_probability": 0.275,
+        "significant_degradation": false
+      },
+      "AP": {
+        "median_delta": -0.005882022367268466,
+        "degradation_probability": 0.559,
+        "significant_degradation": false
+      },
+      "F2": {
+        "median_delta": -0.020684455807032265,
+        "degradation_probability": 0.896,
+        "significant_degradation": true
+      },
+      "MCC": {
+        "median_delta": -0.01899077641893271,
+        "degradation_probability": 0.815,
+        "significant_degradation": false
+      }
+    },
+    "criteria": {
+      "minimum_objective_gain": 0.002,
+      "minimum_improvement_probability": 0.75,
+      "minimum_seed_support": 2,
+      "metric_drop_margin": 0.02,
+      "metric_drop_probability": 0.8,
+      "bootstrap_replicates": 1000
+    }
+  }
+]

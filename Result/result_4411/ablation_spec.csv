@@ -1,0 +1,9 @@
+﻿variant,terminal_stage,ablation_type,retuned_on
+full,round9,retuned_component_ablation,tuning
+no_guardrail,upstream,retuned_component_ablation,tuning
+no_catboost,round9,retuned_component_ablation,tuning
+equal_family_weights,round9,retuned_component_ablation,tuning
+no_round8,round9,retuned_component_ablation,tuning
+no_round9_seed,round9,retuned_component_ablation,tuning
+no_local_rules,round8,fixed_stage_output,
+no_aux_rule,primary_only,retuned_component_ablation,tuning

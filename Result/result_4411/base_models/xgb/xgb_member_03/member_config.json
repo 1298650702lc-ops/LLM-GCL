@@ -1,0 +1,16 @@
+{
+  "member_id": "xgb_member_03",
+  "family": "xgb",
+  "display_name": "xgb_auc_seed62_high_colsample",
+  "seed": 62,
+  "params": {
+    "colsample_bytree": 0.75,
+    "gamma": 1.0,
+    "max_depth": 2,
+    "min_child_weight": 5,
+    "reg_alpha": 0.5,
+    "reg_lambda": 8.0,
+    "subsample": 0.75,
+    "sampling_ratio": 0.25
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "member_id": "lr_member_04",
+  "family": "lr",
+  "display_name": "lr_auc_seed72_l2_variant",
+  "seed": 72,
+  "solver": "liblinear",
+  "c_value": 0.3,
+  "penalty": "l2",
+  "fit_intercept": false,
+  "class_weight": null,
+  "sampling_ratio": 0.25
+}

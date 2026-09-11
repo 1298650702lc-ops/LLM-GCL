@@ -1,0 +1,33 @@
+{
+  "experiment": "4411",
+  "passed": true,
+  "model_file_count": 13,
+  "train_oof_artifacts": [],
+  "role_checks": {
+    "guardrail_validation": true,
+    "rule_discovery_tuning": true,
+    "oof_role_absent": true,
+    "protected_roles_exact": true,
+    "protected_evaluation_after_freeze": true
+  },
+  "original_source_hash_checks": {
+    "7111_script": true,
+    "4411_script": true,
+    "comparison_report": true
+  },
+  "terminal_stage": "round9",
+  "prediction_reproduction": {
+    "test": {
+      "max_absolute_error": 1.059813198311943e-08,
+      "absolute_tolerance": 1e-07,
+      "labels_exact": true,
+      "passed": true
+    },
+    "external": {
+      "max_absolute_error": 8.479254798299252e-09,
+      "absolute_tolerance": 1e-07,
+      "labels_exact": true,
+      "passed": true
+    }
+  }
+}

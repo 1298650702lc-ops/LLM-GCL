@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "split_integrity_passed": true,
+  "freeze_time": "2026-08-04T12:55:17.546344+00:00",
+  "protected_evaluation_started_at": "2026-08-04T12:55:17.919025+00:00",
+  "protected_evaluation_after_freeze": true,
+  "rule_discovery_dataset": "tuning",
+  "selection_dataset": "tuning",
+  "guardrail_dataset": "validation",
+  "protected_roles": [
+    "test",
+    "external"
+  ],
+  "oof_pipeline_role_present": false
+}

@@ -1,0 +1,86 @@
+{
+  "no_oversampling": {
+    "positive_to_negative_ratio": null,
+    "fusion": {
+      "xgb_weight": 0.72,
+      "lr_weight": 0.28
+    },
+    "error_pattern_correction": {
+      "rule": {
+        "feature": "体重",
+        "rule_type": "numeric_gt",
+        "split_value": 58.0,
+        "rule_label": "体重 > 58.0000",
+        "source_comparison": "FN_vs_TP"
+      },
+      "threshold_group": 0.26029862287739075,
+      "threshold_other": 0.18551103553984483,
+      "threshold": 0.27,
+      "objective": 0.8443654835231953
+    },
+    "selection_dataset": "tuning"
+  },
+  "positive_negative_0_25": {
+    "positive_to_negative_ratio": 0.25,
+    "fusion": {
+      "xgb_weight": 0.56,
+      "lr_weight": 0.43999999999999995
+    },
+    "error_pattern_correction": {
+      "rule": {
+        "feature": "体重",
+        "rule_type": "numeric_gt",
+        "split_value": 58.0,
+        "rule_label": "体重 > 58.0000",
+        "source_comparison": "FN_vs_TP"
+      },
+      "threshold_group": 0.36673658953968813,
+      "threshold_other": 0.2494698969484524,
+      "threshold": 0.26,
+      "objective": 0.8273665876247107
+    },
+    "selection_dataset": "tuning"
+  },
+  "positive_negative_0_50": {
+    "positive_to_negative_ratio": 0.5,
+    "fusion": {
+      "xgb_weight": 0.525,
+      "lr_weight": 0.475
+    },
+    "error_pattern_correction": {
+      "rule": {
+        "feature": "体重",
+        "rule_type": "numeric_gt",
+        "split_value": 58.0,
+        "rule_label": "体重 > 58.0000",
+        "source_comparison": "FN_vs_TP"
+      },
+      "threshold_group": 0.47743113968847933,
+      "threshold_other": 0.29920257999944555,
+      "threshold": 0.27,
+      "objective": 0.8392787318989583
+    },
+    "selection_dataset": "tuning"
+  },
+  "full_balance_1_00": {
+    "positive_to_negative_ratio": 1.0,
+    "fusion": {
+      "xgb_weight": 0.525,
+      "lr_weight": 0.475
+    },
+    "error_pattern_correction": {
+      "rule": {
+        "feature": "体重",
+        "rule_type": "numeric_gt",
+        "split_value": 58.0,
+        "rule_label": "体重 > 58.0000",
+        "source_comparison": "FN_vs_TP"
+      },
+      "threshold_group": 0.4359705903172849,
+      "threshold_other": 0.25370671684423995,
+      "threshold": 0.43,
+      "objective": 0.8366452235913421
+    },
+    "selection_dataset": "tuning"
+  }
+}

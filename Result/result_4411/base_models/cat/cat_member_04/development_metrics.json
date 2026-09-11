@@ -1,0 +1,41 @@
+{
+  "member_id": "cat_member_04",
+  "guardrail_dataset": "validation",
+  "search_dataset": "tuning",
+  "tuning_metrics": {
+    "ROC AUC": 0.6964522986978473,
+    "AP": 0.33024891945342455,
+    "Accuracy": 0.5816023738872403,
+    "Balanced Acc": 0.6750265745415891,
+    "Precision": 0.2471264367816092,
+    "Recall": 0.8113207547169812,
+    "Specificity": 0.5387323943661971,
+    "F1": 0.3788546255506608,
+    "F2": 0.5569948186528498,
+    "MCC": 0.2550132037740808,
+    "threshold": 0.46,
+    "tp": 43,
+    "fp": 131,
+    "tn": 153,
+    "fn": 10
+  },
+  "validation_metrics": {
+    "ROC AUC": 0.6570512820512822,
+    "AP": 0.2436884119889002,
+    "Accuracy": 0.6,
+    "Balanced Acc": 0.7323717948717949,
+    "Precision": 0.26666666666666666,
+    "Recall": 0.9230769230769231,
+    "Specificity": 0.5416666666666666,
+    "F1": 0.41379310344827586,
+    "F2": 0.6185567010309279,
+    "MCC": 0.3351313685527426,
+    "threshold": 0.45,
+    "tp": 12,
+    "fp": 33,
+    "tn": 39,
+    "fn": 1
+  },
+  "internal_cv_used_only_for_training": true,
+  "oof_predictions_exposed_to_pipeline": false
+}

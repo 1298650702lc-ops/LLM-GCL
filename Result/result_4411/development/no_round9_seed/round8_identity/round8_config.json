@@ -1,0 +1,18 @@
+{
+  "method": "identity_no_round8",
+  "selection_dataset": "tuning",
+  "threshold": 0.17,
+  "tuning_metrics": {
+    "ROC AUC": 0.677385065107627,
+    "AP": 0.2892711478127874,
+    "Accuracy": 0.56973293768546,
+    "Balanced Acc": 0.6756577199043317,
+    "Precision": 0.24444444444444444,
+    "Recall": 0.8301886792452831,
+    "Specificity": 0.5211267605633803,
+    "F1": 0.37768240343347637,
+    "F2": 0.5612244897959183,
+    "MCC": 0.2563942391390683,
+    "threshold": 0.17
+  }
+}

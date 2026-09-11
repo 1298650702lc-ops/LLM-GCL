@@ -146,7 +146,7 @@ def _cat_ready(x: pd.DataFrame) -> tuple[pd.DataFrame, list[str]]:
 
 
 def _cat_model(iterations: int, seed: int, params: dict[str, Any]) -> CatBoostClassifier:
-    return CatBoostClassifier(iterations=iterations, depth=int(params["depth"]), learning_rate=float(params["learning_rate"]), l2_leaf_reg=float(params["l2_leaf_reg"]), random_strength=float(params["random_strength"]), bagging_temperature=float(params["bagging_temperature"]), loss_function="Logloss", eval_metric="AUC", random_seed=seed, verbose=False)
+    return CatBoostClassifier(iterations=iterations, depth=int(params["depth"]), learning_rate=float(params["learning_rate"]), l2_leaf_reg=float(params["l2_leaf_reg"]), random_strength=float(params["random_strength"]), bagging_temperature=float(params["bagging_temperature"]), loss_function="Logloss", eval_metric="AUC", random_seed=seed, verbose=False, allow_writing_files=False)
 
 
 def _fit_cat_fold(x: pd.DataFrame, y: pd.Series, config: dict[str, Any], random_state: int) -> tuple[dict[str, Any], int]:
@@ -202,26 +202,33 @@ def train_base_pool(split: SplitBundle) -> tuple[pd.DataFrame, dict[str, dict[st
             else:
                 bundle, oof = _fit_cat(config, split)
             train_prob = predict_bundle(bundle, split.x_train)
-            val_prob = predict_bundle(bundle, split.x_val)
-            test_prob = predict_bundle(bundle, split.x_test)
-            val_best = best_scanned_metrics(split.y_val.to_numpy(), val_prob)
+            tuning_prob = predict_bundle(bundle, split.x_tuning)
+            validation_prob = predict_bundle(bundle, split.x_validation)
+            tuning_best = best_scanned_metrics(split.y_tuning.to_numpy(), tuning_prob)
+            validation_best = best_scanned_metrics(split.y_validation.to_numpy(), validation_prob)
             payload = {
                 "member_id": member_id,
                 "family": family,
                 "bundle": bundle,
                 "train_prob": train_prob,
                 "oof_prob": oof,
-                "val_prob": val_prob,
-                "test_prob": test_prob,
+                "tuning_prob": tuning_prob,
+                "validation_prob": validation_prob,
                 "train_true": split.y_train.to_numpy(dtype=int),
                 "oof_true": split.y_train.to_numpy(dtype=int),
-                "val_true": split.y_val.to_numpy(dtype=int),
-                "test_true": split.y_test.to_numpy(dtype=int),
-                "val_metrics": summarize_metrics(evaluate_predictions(split.y_val.to_numpy(), val_prob, val_best["threshold"])),
-                "test_metrics": summarize_metrics(evaluate_predictions(split.y_test.to_numpy(), test_prob, val_best["threshold"])),
+                "tuning_true": split.y_tuning.to_numpy(dtype=int),
+                "validation_true": split.y_validation.to_numpy(dtype=int),
+                "tuning_metrics": summarize_metrics(evaluate_predictions(split.y_tuning.to_numpy(), tuning_prob, tuning_best["threshold"])),
+                "validation_metrics": summarize_metrics(evaluate_predictions(split.y_validation.to_numpy(), validation_prob, validation_best["threshold"])),
             }
             pool[member_id] = payload
-            rows.append({"member_id": member_id, "family": family, **{f"val_{key}": value for key, value in payload["val_metrics"].items()}})
+            rows.append({
+                "member_id": member_id,
+                "family": family,
+                "display_name": config.get("display_name", member_id),
+                **{f"tuning_{key}": value for key, value in payload["tuning_metrics"].items()},
+                **{f"validation_{key}": value for key, value in payload["validation_metrics"].items()},
+            })
     return pd.DataFrame(rows), pool
 
 

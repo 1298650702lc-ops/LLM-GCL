@@ -1,0 +1,45 @@
+{
+  "selection_metric": "validation ROC AUC with guardrails",
+  "ranking_rule": [
+    "ROC AUC",
+    "AP",
+    "F2",
+    "MCC",
+    "Recall"
+  ],
+  "guardrail_config": {
+    "min_auc_gain": 0.002,
+    "max_f2_drop": 0.005,
+    "max_mcc_drop": 0.01,
+    "max_ap_drop": 0.002
+  },
+  "max_total_members": 7,
+  "stop_reason": "No candidate satisfied the AUC gain and guardrail constraints.",
+  "selected_member_ids": [
+    "xgb_member_04",
+    "lr_member_01"
+  ],
+  "selected_xgb_member_ids": [
+    "xgb_member_04"
+  ],
+  "selected_lr_member_ids": [
+    "lr_member_01"
+  ],
+  "xgb_weight": 0.6,
+  "lr_weight": 0.4,
+  "threshold": 0.17,
+  "val_metrics": {
+    "ROC AUC": 0.7857905982905984,
+    "AP": 0.41358033307002995,
+    "Accuracy": 0.5882352941176471,
+    "Balanced Acc": 0.7254273504273505,
+    "Precision": 0.2608695652173913,
+    "Recall": 0.9230769230769231,
+    "Specificity": 0.5277777777777778,
+    "F1": 0.4067796610169491,
+    "F2": 0.6122448979591837,
+    "MCC": 0.32565916668073464,
+    "threshold": 0.17
+  },
+  "selection_dataset": "validation"
+}

@@ -1,0 +1,33 @@
+{
+  "positive_to_negative_ratio": 0.5,
+  "xgboost_config": {
+    "member_id": "xgb_member_04",
+    "family": "xgb",
+    "display_name": "xgb_auc_seed72_strong_reg",
+    "seed": 72,
+    "params": {
+      "colsample_bytree": 0.7,
+      "gamma": 1.5,
+      "max_depth": 2,
+      "min_child_weight": 5,
+      "reg_alpha": 0.5,
+      "reg_lambda": 10.0,
+      "subsample": 0.7,
+      "sampling_ratio": 0.5
+    }
+  },
+  "logistic_regression_config": {
+    "member_id": "lr_member_01",
+    "family": "lr",
+    "display_name": "lr_auc_seed42_base",
+    "seed": 42,
+    "solver": "liblinear",
+    "c_value": 0.3,
+    "penalty": "l1",
+    "fit_intercept": false,
+    "class_weight": null,
+    "sampling_ratio": 0.5
+  },
+  "xgboost_selected_iteration": 18,
+  "training_dataset": "train"
+}

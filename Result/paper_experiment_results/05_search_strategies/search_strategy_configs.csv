@@ -1,0 +1,6 @@
+﻿method,candidate_pool_size,evaluations,feature,rule_type,split_value,threshold_group,threshold_other,report_threshold,tuning_objective
+semantic_candidate_fixed,1,1,体重,numeric_gt,58.0,0.3,0.24,0.27,0.8210084974681244
+gated_final_model,44,60,体重,numeric_gt,58.0,0.3228927810673956,0.2094046412245567,0.3,0.8273178241877319
+bayesian_expanded_candidates,228,60,年龄,numeric_le,61.0,0.3036611374366181,0.22819551332861193,0.39,0.8390286829001006
+genetic_evidence_candidates,44,60,bmi,numeric_gt,21.09375,0.33791540878812343,0.2530891088789956,0.25,0.8219473357885925
+genetic_expanded_candidates,228,60,年龄,numeric_le,61.0,0.5,0.3609052440974643,0.24,0.8407320694313877

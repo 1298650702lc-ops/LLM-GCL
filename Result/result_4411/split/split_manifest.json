@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-08-04T12:49:04.472952+00:00",
+  "experiment": "4411",
+  "strategy": "preserve validation/test; stratify the former training cohort into equal 4:4 train/tuning",
+  "source_rows": 844,
+  "source_sha256": "5b967742142c83a286b33883e6e815e204c8230a9dfd274db2e9a592cf9d217b",
+  "original_split_seed": 20260417,
+  "tuning_split_seed": 20260419,
+  "roles": [
+    {
+      "dataset_role": "train",
+      "n": 337,
+      "positive": 53,
+      "negative": 284,
+      "positive_rate": 0.1572700296735905,
+      "split_seed": 20260419
+    },
+    {
+      "dataset_role": "tuning",
+      "n": 337,
+      "positive": 53,
+      "negative": 284,
+      "positive_rate": 0.1572700296735905,
+      "split_seed": 20260419
+    },
+    {
+      "dataset_role": "validation",
+      "n": 85,
+      "positive": 13,
+      "negative": 72,
+      "positive_rate": 0.15294117647058825,
+      "split_seed": 20260418
+    },
+    {
+      "dataset_role": "test",
+      "n": 85,
+      "positive": 13,
+      "negative": 72,
+      "positive_rate": 0.15294117647058825,
+      "split_seed": 20260417
+    }
+  ],
+  "integrity": {
+    "pairwise_disjoint": true,
+    "complete_coverage": true,
+    "id_column_unique": true
+  }
+}

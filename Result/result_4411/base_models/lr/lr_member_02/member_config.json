@@ -1,0 +1,12 @@
+{
+  "member_id": "lr_member_02",
+  "family": "lr",
+  "display_name": "lr_auc_seed52_balanced",
+  "seed": 52,
+  "solver": "liblinear",
+  "c_value": 0.15,
+  "penalty": "l1",
+  "fit_intercept": false,
+  "class_weight": "balanced",
+  "sampling_ratio": 0.25
+}

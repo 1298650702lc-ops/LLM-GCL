@@ -1,0 +1,14 @@
+{
+  "member_id": "cat_member_04",
+  "family": "cat",
+  "display_name": "cat_seed72_strong_reg",
+  "seed": 72,
+  "sampling_ratio": 1.0,
+  "params": {
+    "depth": 4,
+    "learning_rate": 0.02,
+    "l2_leaf_reg": 18.0,
+    "random_strength": 3.0,
+    "bagging_temperature": 1.5
+  }
+}

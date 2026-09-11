@@ -1,0 +1,26 @@
+{
+  "family": "lr",
+  "feature_columns": [
+    "右肺上叶",
+    "右肺中叶",
+    "右肺下叶",
+    "左肺上叶",
+    "左肺下叶",
+    "纵隔肿物",
+    "高血压",
+    "糖尿病",
+    "冠心病",
+    "结核病史",
+    "甲状腺疾病",
+    "甲状腺手术史",
+    "肺部手术史",
+    "放化疗史",
+    "胸部外伤史",
+    "性别",
+    "年龄",
+    "身高",
+    "体重",
+    "bmi"
+  ],
+  "model_path": "D:\\deep\\DF\\Cascade learning\\test\\auto\\4411\\result_4411\\base_models\\lr\\lr_member_01\\model.joblib"
+}

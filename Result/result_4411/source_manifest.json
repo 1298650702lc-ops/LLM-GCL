@@ -1,0 +1,9 @@
+{
+  "experiment": "4411",
+  "created_at": "2026-08-04T12:49:04.476271+00:00",
+  "auto_pipeline": "D:\\deep\\DF\\Cascade learning\\test\\auto\\auto_pipeline.py",
+  "auto_pipeline_sha256": "9d0b61f0b3ae82c5070bf958f69f21fe187544a7cc7a03ef72873a661447bb56",
+  "original_7111_script_sha256": "781dde5db6516743468c419c6b5219aaeefc5c03f684582ab324f6f99c2f96c7",
+  "original_4411_script_sha256": "4963e9ce2d843a3c81d0cc4854a0dd74433a969d0fa10ed81776253231e18d60",
+  "original_comparison_report_sha256": "e62aa3b65f5ece27c94aa1d9cbe53ca09f75990f5dadf2bd9d9778f9850bd076"
+}

@@ -1,0 +1,315 @@
+{
+  "discovery_dataset": "tuning",
+  "selection_dataset": "tuning",
+  "candidate_count": 44,
+  "candidate_rules": [
+    {
+      "feature": "体重",
+      "rule_type": "numeric_gt",
+      "split_value": 58.0,
+      "rule_label": "体重 > 58.0000",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "体重",
+      "rule_type": "numeric_gt",
+      "split_value": 61.0,
+      "rule_label": "体重 > 61.0000",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "体重",
+      "rule_type": "numeric_gt",
+      "split_value": 65.0,
+      "rule_label": "体重 > 65.0000",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "体重",
+      "rule_type": "numeric_gt",
+      "split_value": 70.0,
+      "rule_label": "体重 > 70.0000",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "体重",
+      "rule_type": "numeric_gt",
+      "split_value": 76.0,
+      "rule_label": "体重 > 76.0000",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "身高",
+      "rule_type": "numeric_gt",
+      "split_value": 160.0,
+      "rule_label": "身高 > 160.0000",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "身高",
+      "rule_type": "numeric_gt",
+      "split_value": 162.6,
+      "rule_label": "身高 > 162.6000",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "身高",
+      "rule_type": "numeric_gt",
+      "split_value": 165.0,
+      "rule_label": "身高 > 165.0000",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "身高",
+      "rule_type": "numeric_gt",
+      "split_value": 170.0,
+      "rule_label": "身高 > 170.0000",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "身高",
+      "rule_type": "numeric_gt",
+      "split_value": 174.0,
+      "rule_label": "身高 > 174.0000",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "bmi",
+      "rule_type": "numeric_gt",
+      "split_value": 21.09375,
+      "rule_label": "bmi > 21.0938",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "bmi",
+      "rule_type": "numeric_gt",
+      "split_value": 22.65625,
+      "rule_label": "bmi > 22.6562",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "bmi",
+      "rule_type": "numeric_gt",
+      "split_value": 23.87543253,
+      "rule_label": "bmi > 23.8754",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "bmi",
+      "rule_type": "numeric_gt",
+      "split_value": 25.390625,
+      "rule_label": "bmi > 25.3906",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "bmi",
+      "rule_type": "numeric_gt",
+      "split_value": 26.836402275999998,
+      "rule_label": "bmi > 26.8364",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "甲状腺手术史",
+      "rule_type": "numeric_le",
+      "split_value": 0.0,
+      "rule_label": "甲状腺手术史 <= 0.0000",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "胸部外伤史",
+      "rule_type": "numeric_gt",
+      "split_value": 0.0,
+      "rule_label": "胸部外伤史 > 0.0000",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "年龄",
+      "rule_type": "numeric_le",
+      "split_value": 52.0,
+      "rule_label": "年龄 <= 52.0000",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "年龄",
+      "rule_type": "numeric_le",
+      "split_value": 57.0,
+      "rule_label": "年龄 <= 57.0000",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "年龄",
+      "rule_type": "numeric_le",
+      "split_value": 60.0,
+      "rule_label": "年龄 <= 60.0000",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "年龄",
+      "rule_type": "numeric_le",
+      "split_value": 65.0,
+      "rule_label": "年龄 <= 65.0000",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "年龄",
+      "rule_type": "numeric_le",
+      "split_value": 68.0,
+      "rule_label": "年龄 <= 68.0000",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "性别",
+      "rule_type": "categorical_ne",
+      "split_value": "女",
+      "rule_label": "性别 != 女",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "性别",
+      "rule_type": "categorical_eq",
+      "split_value": "男",
+      "rule_label": "性别 == 男",
+      "source_comparison": "FN_vs_TP"
+    },
+    {
+      "feature": "身高",
+      "rule_type": "numeric_le",
+      "split_value": 160.0,
+      "rule_label": "身高 <= 160.0000",
+      "source_comparison": "FP_vs_TN"
+    },
+    {
+      "feature": "身高",
+      "rule_type": "numeric_le",
+      "split_value": 162.6,
+      "rule_label": "身高 <= 162.6000",
+      "source_comparison": "FP_vs_TN"
+    },
+    {
+      "feature": "身高",
+      "rule_type": "numeric_le",
+      "split_value": 165.0,
+      "rule_label": "身高 <= 165.0000",
+      "source_comparison": "FP_vs_TN"
+    },
+    {
+      "feature": "身高",
+      "rule_type": "numeric_le",
+      "split_value": 170.0,
+      "rule_label": "身高 <= 170.0000",
+      "source_comparison": "FP_vs_TN"
+    },
+    {
+      "feature": "身高",
+      "rule_type": "numeric_le",
+      "split_value": 174.0,
+      "rule_label": "身高 <= 174.0000",
+      "source_comparison": "FP_vs_TN"
+    },
+    {
+      "feature": "体重",
+      "rule_type": "numeric_le",
+      "split_value": 58.0,
+      "rule_label": "体重 <= 58.0000",
+      "source_comparison": "FP_vs_TN"
+    },
+    {
+      "feature": "体重",
+      "rule_type": "numeric_le",
+      "split_value": 61.0,
+      "rule_label": "体重 <= 61.0000",
+      "source_comparison": "FP_vs_TN"
+    },
+    {
+      "feature": "体重",
+      "rule_type": "numeric_le",
+      "split_value": 65.0,
+      "rule_label": "体重 <= 65.0000",
+      "source_comparison": "FP_vs_TN"
+    },
+    {
+      "feature": "体重",
+      "rule_type": "numeric_le",
+      "split_value": 70.0,
+      "rule_label": "体重 <= 70.0000",
+      "source_comparison": "FP_vs_TN"
+    },
+    {
+      "feature": "体重",
+      "rule_type": "numeric_le",
+      "split_value": 76.0,
+      "rule_label": "体重 <= 76.0000",
+      "source_comparison": "FP_vs_TN"
+    },
+    {
+      "feature": "冠心病",
+      "rule_type": "numeric_le",
+      "split_value": 0.0,
+      "rule_label": "冠心病 <= 0.0000",
+      "source_comparison": "FP_vs_TN"
+    },
+    {
+      "feature": "bmi",
+      "rule_type": "numeric_le",
+      "split_value": 21.09375,
+      "rule_label": "bmi <= 21.0938",
+      "source_comparison": "FP_vs_TN"
+    },
+    {
+      "feature": "bmi",
+      "rule_type": "numeric_le",
+      "split_value": 22.65625,
+      "rule_label": "bmi <= 22.6562",
+      "source_comparison": "FP_vs_TN"
+    },
+    {
+      "feature": "bmi",
+      "rule_type": "numeric_le",
+      "split_value": 23.87543253,
+      "rule_label": "bmi <= 23.8754",
+      "source_comparison": "FP_vs_TN"
+    },
+    {
+      "feature": "bmi",
+      "rule_type": "numeric_le",
+      "split_value": 25.390625,
+      "rule_label": "bmi <= 25.3906",
+      "source_comparison": "FP_vs_TN"
+    },
+    {
+      "feature": "bmi",
+      "rule_type": "numeric_le",
+      "split_value": 26.836402275999998,
+      "rule_label": "bmi <= 26.8364",
+      "source_comparison": "FP_vs_TN"
+    },
+    {
+      "feature": "甲状腺手术史",
+      "rule_type": "numeric_gt",
+      "split_value": 0.0,
+      "rule_label": "甲状腺手术史 > 0.0000",
+      "source_comparison": "FP_vs_TN"
+    },
+    {
+      "feature": "甲状腺疾病",
+      "rule_type": "numeric_gt",
+      "split_value": 0.0,
+      "rule_label": "甲状腺疾病 > 0.0000",
+      "source_comparison": "FP_vs_TN"
+    },
+    {
+      "feature": "性别",
+      "rule_type": "categorical_eq",
+      "split_value": "女",
+      "rule_label": "性别 == 女",
+      "source_comparison": "FP_vs_TN"
+    },
+    {
+      "feature": "性别",
+      "rule_type": "categorical_ne",
+      "split_value": "男",
+      "rule_label": "性别 != 男",
+      "source_comparison": "FP_vs_TN"
+    }
+  ]
+}

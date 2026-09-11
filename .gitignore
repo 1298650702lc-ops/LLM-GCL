@@ -22,6 +22,11 @@ venv/
 *.h5
 *.hdf5
 
+# Checked publication results are versioned with the standalone package.
+!Result/
+!Result/**
+**/df-test.csv
+
 model_output/
 results/
 catboost_info/

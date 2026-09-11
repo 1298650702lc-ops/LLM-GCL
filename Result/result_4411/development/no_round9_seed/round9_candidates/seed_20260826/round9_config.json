@@ -1,0 +1,39 @@
+{
+  "method": "bayesian_optimization",
+  "selection_dataset": "tuning",
+  "candidate_discovery_dataset": "tuning",
+  "candidate_pool_size": 44,
+  "rule": {
+    "feature": "年龄",
+    "rule_type": "numeric_le",
+    "split_value": 60.0,
+    "rule_label": "年龄 <= 60.0000",
+    "source_comparison": "FN_vs_TP",
+    "display_rule_label": "年龄 <= 60.0000"
+  },
+  "threshold_group": 0.32499541310129576,
+  "threshold_other": 0.21788409728788066,
+  "threshold": 0.36,
+  "stability": {
+    "stability_mean_auc": 0.7052401837928153,
+    "stability_std_auc": 0.08452803075118842,
+    "stability_score": 0.6967873807176964
+  },
+  "tuning_metrics": {
+    "ROC AUC": 0.7027637523252726,
+    "AP": 0.30471872841084935,
+    "Accuracy": 0.5667655786350149,
+    "Balanced Acc": 0.6738971565240499,
+    "Precision": 0.2430939226519337,
+    "Recall": 0.8301886792452831,
+    "Specificity": 0.5176056338028169,
+    "F1": 0.37606837606837606,
+    "F2": 0.5597964376590332,
+    "MCC": 0.2539323282153957,
+    "threshold": 0.36,
+    "tp": 44,
+    "fp": 137,
+    "tn": 147,
+    "fn": 9
+  }
+}
