@@ -34,7 +34,7 @@ python run.py train `
   --output-dir "D:\path\to\model_output"
 ```
 
-The internal CSV must contain the binary target column `左旋标签`. External validation is optional. Training writes:
+The internal CSV must contain the binary target column `Left-sided label`. External validation is optional. Training writes:
 
 - `llm_gcl_model.joblib`: selected fitted members and the final inference configuration;
 - `llm_gcl_config.json`: the frozen 4:4:1:1 configuration, data roles, and stage decisions;
