@@ -27,7 +27,7 @@ Training data must be provided as a CSV file and meet the following requirements
 
 | Item | Requirement |
 |---|---|
-| Target column | Must contain a column named `左旋标签` |
+| Target column | Must contain a column named `Left-handed tag` |
 | Target values | Must contain only `0` and `1`, with both classes represented |
 | ID column | A column named `id` is excluded from the model features |
 | Feature types | Both numerical and categorical features are supported |
@@ -117,7 +117,7 @@ Arguments:
 
 | Argument | Required | Description |
 |---|---|---|
-| `--data` | Yes | Internal training data containing the `左旋标签` target column |
+| `--data` | Yes | Internal training data containing the `Left-handed tag` target column |
 | `--output-dir` | Yes | Output directory for the model and training results |
 | `--external-data` | No | Labeled CSV file used for final external validation |
 | `--strict-signature` | No | Requires the model members, rules, weights, and thresholds to strictly reproduce the frozen configuration |
