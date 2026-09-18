@@ -89,7 +89,7 @@ def select_cat(registry: pd.DataFrame, pool: dict[str, dict[str, Any]], base: di
                         continue
                     probability = wx * _mean(pool, xgb_ids, "validation") + wl * _mean(pool, lr_ids, "validation") + wc * _mean(pool, list(subset), "validation")
                     metrics = best_scanned_metrics(y_validation, probability)
-                    if metrics["ROC AUC"] - baseline["ROC AUC"] < 0.0005:
+                    if metrics["ROC AUC"] - baseline["ROC AUC"] < 0.002:
                         continue
                     if metrics["F2"] - baseline["F2"] < -0.005 or metrics["MCC"] - baseline["MCC"] < -0.010 or metrics["AP"] - baseline["AP"] < -0.002:
                         continue

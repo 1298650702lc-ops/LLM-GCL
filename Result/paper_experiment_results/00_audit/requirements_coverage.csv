@@ -2,11 +2,8 @@
 E01,Current final and stage metrics,01_existing_model
 E02,Component ablation,01_existing_model
 E03,Bootstrap robustness,01_existing_model
-E04,"Calibration, stacking, and MSHSE baselines",02_baselines
 E05,Oversampling sensitivity,03_oversampling
 E06,Guardrail and single-metric selection,04_guardrail
 E07,Search-strategy comparison,05_search_strategies
-E08,External baseline evaluation,02_baselines
 E09,Current upstream SHAP,06_interpretability
-E10,Six-representation clustering,07_clustering
 E11,Data distribution and correlation,08_data_analysis

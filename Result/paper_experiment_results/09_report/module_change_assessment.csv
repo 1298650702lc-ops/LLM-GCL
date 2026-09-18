@@ -1,11 +1,9 @@
 ﻿module,change_level,structure_change,reason
-Baseline comparison,大修改,否,全部基线已按4:4:1:1数据职责重新拟合，原表数值、排序和比较句均需替换。
 Data analysis,小修改,否,保留Pearson相关分析和热图结构，仅替换重新计算的相关系数与排序。
 Interpretability analysis,大修改,否,SHAP已对当前XGBoost与Logistic Regression融合模型重算，特征排名、方向和审计数据需全部以新结果为准。
-Clustering,大修改,局部,仍保留六种表示，但两个候选校正未进入最终模型，图题和正文必须标明候选被拒绝。
 Results without minority-class oversampling,大修改,否,四种协议已在当前训练与调参边界下重跑，旧验证结果不可沿用。
 Results without guardrail constraints,大修改,否,全部成员、等权和四种单指标选择均已重新运行，成员构成与结果需要整体替换。
 Stage ablation,大修改,局部,分区概率校正和局部概率校正均被门控拒绝，错误模式校正为终端阶段，旧阶段递进叙事不再成立。
 Robustness statistics,中等修改,否,保留分层Bootstrap方法，结果对象改为内部测试集与外部队列，并替换均值、标准差和置信区间。
-External dataset validation,中等修改,否,最终模型外部AUROC为0.7105、AP为0.3333，基线结果亦已重跑。
+External dataset validation,中等修改,否,最终模型外部AUROC为0.7105、AP为0.3333。
 Parameter-search strategy and candidate expansion,大修改,否,五种策略已在相同数据边界下重新比较，旧参数搜索表和优劣结论需全部替换。

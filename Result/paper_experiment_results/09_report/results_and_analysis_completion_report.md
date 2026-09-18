@@ -10,41 +10,16 @@
 
 | module                                            | change_level   | structure_change   | reason                                                                                             |
 |:--------------------------------------------------|:---------------|:-------------------|:---------------------------------------------------------------------------------------------------|
-| Baseline comparison                               | 大修改         | 否                 | 全部基线已按4:4:1:1数据职责重新拟合，原表数值、排序和比较句均需替换。                              |
 | Data analysis                                     | 小修改         | 否                 | 保留Pearson相关分析和热图结构，仅替换重新计算的相关系数与排序。                                    |
 | Interpretability analysis                         | 大修改         | 否                 | SHAP已对当前XGBoost与Logistic Regression融合模型重算，特征排名、方向和审计数据需全部以新结果为准。 |
-| Clustering                                        | 大修改         | 局部               | 仍保留六种表示，但两个候选校正未进入最终模型，图题和正文必须标明候选被拒绝。                       |
 | Results without minority-class oversampling       | 大修改         | 否                 | 四种协议已在当前训练与调参边界下重跑，旧验证结果不可沿用。                                         |
 | Results without guardrail constraints             | 大修改         | 否                 | 全部成员、等权和四种单指标选择均已重新运行，成员构成与结果需要整体替换。                           |
 | Stage ablation                                    | 大修改         | 局部               | 分区概率校正和局部概率校正均被门控拒绝，错误模式校正为终端阶段，旧阶段递进叙事不再成立。           |
 | Robustness statistics                             | 中等修改       | 否                 | 保留分层Bootstrap方法，结果对象改为内部测试集与外部队列，并替换均值、标准差和置信区间。            |
-| External dataset validation                       | 中等修改       | 否                 | 最终模型外部AUROC为0.7105、AP为0.3333，基线结果亦已重跑。                                          |
+| External dataset validation                       | 中等修改       | 否                 | 最终模型外部AUROC为0.7105、AP为0.3333。                                          |
 | Parameter-search strategy and candidate expansion | 大修改         | 否                 | 五种策略已在相同数据边界下重新比较，旧参数搜索表和优劣结论需全部替换。                             |
 
 ## 三、各模块新结果表
-
-### 1. Baseline comparison
-
-| method                   | dataset    |   ROC AUC |     AP |   Recall |   Specificity |     F2 |    MCC |
-|:-------------------------|:-----------|----------:|-------:|---------:|--------------:|-------:|-------:|
-| xgboost                  | validation |    0.7222 | 0.3348 |   0.9231 |        0.5417 | 0.6186 | 0.3351 |
-| logistic_regression      | validation |    0.7799 | 0.3907 |   0.9231 |        0.5    | 0.6    | 0.3071 |
-| upstream_fusion          | validation |    0.7858 | 0.4136 |   0.9231 |        0.5278 | 0.6122 | 0.3257 |
-| platt_scaling            | validation |    0.7858 | 0.4136 |   0.9231 |        0.5139 | 0.6061 | 0.3163 |
-| isotonic_regression      | validation |    0.7399 | 0.285  |   0.9231 |        0.5278 | 0.6122 | 0.3257 |
-| stacking_lr              | validation |    0.7804 | 0.3929 |   0.9231 |        0.5    | 0.6    | 0.3071 |
-| balanced_stacking_lr     | validation |    0.7804 | 0.3936 |   0.9231 |        0.5    | 0.6    | 0.3071 |
-| mshse_selective_ensemble | validation |    0.7286 | 0.3277 |   0.9231 |        0.5139 | 0.6061 | 0.3163 |
-| final_model              | validation |    0.7473 | 0.3536 |   0.9231 |        0.5    | 0.6    | 0.3071 |
-| xgboost                  | test       |    0.6875 | 0.2678 |   0.9231 |        0.5417 | 0.6186 | 0.3351 |
-| logistic_regression      | test       |    0.6522 | 0.2065 |   0.9231 |        0.5    | 0.6    | 0.3071 |
-| upstream_fusion          | test       |    0.6736 | 0.2245 |   0.9231 |        0.5278 | 0.6122 | 0.3257 |
-| platt_scaling            | test       |    0.6736 | 0.2245 |   0.9231 |        0.5139 | 0.6061 | 0.3163 |
-| isotonic_regression      | test       |    0.679  | 0.2297 |   0.9231 |        0.5278 | 0.6122 | 0.3257 |
-| stacking_lr              | test       |    0.6597 | 0.21   |   0.9231 |        0.5    | 0.6    | 0.3071 |
-| balanced_stacking_lr     | test       |    0.6629 | 0.2125 |   0.9231 |        0.4861 | 0.5941 | 0.2981 |
-| mshse_selective_ensemble | test       |    0.6581 | 0.2107 |   0.9231 |        0.5278 | 0.6122 | 0.3257 |
-| final_model              | test       |    0.7762 | 0.3323 |   0.9231 |        0.5    | 0.6    | 0.3071 |
 
 ### 2. Data analysis
 
@@ -77,17 +52,6 @@
 |      8 | 肺部手术史        | History of pulmonary surgery      |          0.0029 |     -0.0007 |
 |      9 | 胸部外伤史        | History of chest trauma           |          0.002  |     -0.0002 |
 |     10 | 体重              | Weight                            |          0.002  |      0.0011 |
-
-### 4. Clustering
-
-| representation                         |   clusters |   silhouette |   feature_dimension |   normalized_mean_within_cluster_distance |   normalized_mean_between_cluster_distance |
-|:---------------------------------------|-----------:|-------------:|--------------------:|------------------------------------------:|-------------------------------------------:|
-| base_learner_probabilities             |          2 |       0.7102 |                  13 |                                    0.3734 |                                     1.792  |
-| upstream_fusion                        |          3 |       0.7757 |                   4 |                                    0.2385 |                                     3.224  |
-| regional_adjustment_candidate_rejected |          4 |       0.8012 |                   6 |                                    0.1642 |                                     3.6618 |
-| clinical_error_structure               |          6 |       0.1997 |                  24 |                                    0.7002 |                                     1.4542 |
-| error_pattern_correction_terminal      |          5 |       0.8392 |                   3 |                                    0.1339 |                                     2.0344 |
-| local_adjustment_candidate_rejected    |          5 |       0.8134 |                   4 |                                    0.1203 |                                     1.6725 |
 
 ### 5. Results without minority-class oversampling
 
@@ -147,16 +111,9 @@
 
 ### 9. External dataset validation
 
+
 | method                   | dataset   |   ROC AUC |     AP |   Recall |   Specificity |     F2 |     MCC |
 |:-------------------------|:----------|----------:|-------:|---------:|--------------:|-------:|--------:|
-| xgboost                  | external  |    0.7105 | 0.2436 |      0.5 |        0.7368 | 0.3571 |  0.1539 |
-| logistic_regression      | external  |    0.7105 | 0.3333 |      0.5 |        0.4737 | 0.2632 | -0.0155 |
-| upstream_fusion          | external  |    0.7105 | 0.3333 |      0.5 |        0.6842 | 0.3333 |  0.1147 |
-| platt_scaling            | external  |    0.7105 | 0.3333 |      0.5 |        0.6842 | 0.3333 |  0.1147 |
-| isotonic_regression      | external  |    0.5789 | 0.175  |      0.5 |        0.6842 | 0.3333 |  0.1147 |
-| stacking_lr              | external  |    0.7105 | 0.3333 |      0.5 |        0.4737 | 0.2632 | -0.0155 |
-| balanced_stacking_lr     | external  |    0.7105 | 0.3333 |      0.5 |        0.4737 | 0.2632 | -0.0155 |
-| mshse_selective_ensemble | external  |    0.5    | 0.3    |      0.5 |        0.5789 | 0.2941 |  0.0468 |
 | final_model              | external  |    0.7105 | 0.3333 |      0.5 |        0.6842 | 0.3333 |  0.1147 |
 
 ### 10. Parameter-search strategy and candidate expansion

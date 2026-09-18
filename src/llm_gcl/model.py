@@ -11,7 +11,7 @@ import pandas as pd
 from .base_models import predict_bundle
 from .data import prepare_features
 from .metrics import evaluate_predictions, summarize_metrics
-from .rules import apply_rule, group_probability
+from .rules import apply_rule, group_probability, segmented_probability, three_group_probability
 
 
 @dataclass
@@ -30,28 +30,68 @@ class LLMGCLModel:
         )
 
     def predict_stages(self, frame: pd.DataFrame) -> dict[str, np.ndarray]:
+        terminal = self.terminal_stage
         aligned = prepare_features(frame, self.feature_columns)
         weights = self.config["upstream"]["weights"]
+        xgb = self._family_probability(aligned, "xgb")
+        lr = self._family_probability(aligned, "lr")
         upstream = (
-            float(weights["xgb"]) * self._family_probability(aligned, "xgb")
-            + float(weights["lr"]) * self._family_probability(aligned, "lr")
+            float(weights["xgb"]) * xgb
+            + float(weights["lr"]) * lr
             + float(weights["cat"]) * self._family_probability(aligned, "cat")
         )
-        round9 = self.config["round9"]
-        corrected = group_probability(
-            upstream,
-            apply_rule(frame, round9["rule"]),
-            float(round9["threshold_group"]),
-            float(round9["threshold_other"]),
-        )
-        return {"upstream": upstream, "round9": corrected}
+        stages = {"upstream": upstream}
+        if terminal == "upstream":
+            return stages
+
+        regional = self.config["round8"]
+        if regional["method"] == "identity_no_round8":
+            round8 = upstream
+        elif regional["method"] == "bayesian_optimization":
+            round8, _ = segmented_probability(
+                upstream, lr - xgb,
+                **{name: float(regional[name]) for name in ("delta", "t_lr", "t_mid", "t_xgb")},
+            )
+        else:
+            raise ValueError(f"不支持的 Round8 方法：{regional['method']}")
+        stages["round8"] = round8
+        if terminal == "round8":
+            return stages
+
+        if terminal == "round9":
+            config = self.config["round9"]
+            stages["round9"] = group_probability(
+                round8, apply_rule(frame, config["rule"]),
+                float(config["threshold_group"]), float(config["threshold_other"]),
+            )
+        else:
+            config = self.config["round10_candidate"]
+            # Training fits Round10 on the retained Round8 output, not on Round9.
+            stages["round10"] = three_group_probability(
+                round8,
+                apply_rule(frame, config["primary_rule"]),
+                apply_rule(frame, config["aux_rule"]),
+                float(config["threshold_primary_aux"]),
+                float(config["threshold_primary_base"]),
+                float(config["threshold_other"]),
+            )
+        return stages
+
+    @property
+    def terminal_stage(self) -> str:
+        terminal = self.config["evaluation_terminal_stage"]
+        if terminal not in {"upstream", "round8", "round9", "round10"}:
+            raise ValueError(f"不支持的终止阶段：{terminal}")
+        return terminal
 
     @property
     def threshold(self) -> float:
-        return float(self.config["round9"]["threshold"])
+        terminal = self.terminal_stage
+        key = "round10_candidate" if terminal == "round10" else terminal
+        return float(self.config[key]["threshold"])
 
     def predict_proba(self, frame: pd.DataFrame) -> np.ndarray:
-        return self.predict_stages(frame)["round9"]
+        return self.predict_stages(frame)[self.terminal_stage]
 
     def predict(self, frame: pd.DataFrame) -> np.ndarray:
         return (self.predict_proba(frame) >= self.threshold).astype(int)

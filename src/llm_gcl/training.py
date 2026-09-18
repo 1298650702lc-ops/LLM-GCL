@@ -275,8 +275,7 @@ def train_formal_model(
         terminal_stage = "round9"
     if round10_decision["accepted"]:
         terminal_stage = "round10"
-    if terminal_stage != "round9":
-        raise RuntimeError(f"当前训练未得到 4411 最终结构，终止阶段={terminal_stage}")
+    terminal = {"upstream": upstream, "round8": round8, "round9": round9, "round10": round10}[terminal_stage]
 
     config = {
         "model": "LLM-GCL",
@@ -319,7 +318,7 @@ def train_formal_model(
         "split_sizes": sizes,
         "candidate_rule_count": len(rules),
         "stage_decisions": config["stage_decisions"],
-        "tuning_metrics": round9["config"]["tuning_metrics"],
+        "tuning_metrics": terminal["config"]["tuning_metrics"],
         "validation_metrics": model.evaluate(split.validation_meta, split.y_validation.to_numpy(dtype=int)),
         "test_metrics": model.evaluate(split.test_meta, split.y_test.to_numpy(dtype=int)),
         "strict_signature_checked": strict_signature,
