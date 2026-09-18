@@ -169,7 +169,7 @@ Prediction requires only the installed `llm_gcl` package and the specified model
 The model training and evaluation workflow is as follows:
 
 1. **Data Loading and Validation**  
-   The CSV file is loaded, the `左旋标签` column is verified as a binary target containing both `0` and `1`, and numerical and categorical features are identified.
+   The CSV file is loaded, the `Left-handed tag` column is verified as a binary target containing both `0` and `1`, and numerical and categorical features are identified.
 
 2. **Stratified Data Splitting**  
    The internal data is divided into training, tuning, validation, and test sets using a 4:4:1:1 ratio. Each subset has a fixed role, and the subsets are never mixed.
