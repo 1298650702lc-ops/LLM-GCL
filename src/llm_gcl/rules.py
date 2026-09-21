@@ -182,30 +182,6 @@ def candidate_rules(validation_frame: pd.DataFrame) -> list[dict[str, Any]]:
     return rules
 
 
-def paper_candidate_rules(validation_frame: pd.DataFrame) -> list[dict[str, Any]]:
-    rules: list[dict[str, Any]] = []
-
-    def add_numeric(feature: str, rule_type: str) -> None:
-        values = pd.to_numeric(validation_frame[feature], errors="coerce")
-        thresholds = sorted({float(values.quantile(quantile)) for quantile in (0.2, 0.35, 0.5, 0.65, 0.8) if values.notna().sum() > 0})
-        for threshold in thresholds:
-            rules.append({"feature": feature, "rule_type": rule_type, "split_value": threshold, "rule_label": build_rule_label(feature, rule_type, threshold), "source_comparison": "FP_vs_TN"})
-
-    add_numeric("身高", "numeric_le")
-    add_numeric("体重", "numeric_le")
-    add_numeric("糖尿病", "numeric_le")
-    add_numeric("右肺中叶", "numeric_gt")
-    add_numeric("甲状腺手术史", "numeric_gt")
-    add_numeric("甲状腺疾病", "numeric_le")
-    rules.extend(
-        [
-            {"feature": "性别", "rule_type": "categorical_eq", "split_value": "女", "rule_label": build_rule_label("性别", "categorical_eq", "女"), "source_comparison": "FP_vs_TN"},
-            {"feature": "性别", "rule_type": "categorical_ne", "split_value": "男", "rule_label": build_rule_label("性别", "categorical_ne", "男"), "source_comparison": "FP_vs_TN"},
-        ]
-    )
-    return rules
-
-
 def local_rule_variants(frame: pd.DataFrame, rule: dict[str, Any], max_variants: int = 9) -> list[dict[str, Any]]:
     if not str(rule["rule_type"]).startswith("numeric_"):
         return [rule]

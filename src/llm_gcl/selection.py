@@ -50,7 +50,7 @@ def select_xgb_lr(registry: pd.DataFrame, pool: dict[str, dict[str, Any]]) -> di
         feasible = []
         for candidate in remaining:
             trial = best_for(selected + [candidate])
-            if trial["ROC AUC"] - current["ROC AUC"] <= 0.002:
+            if trial["ROC AUC"] - current["ROC AUC"] < 0.002:
                 continue
             if trial["F2"] - current["F2"] < -0.005 or trial["MCC"] - current["MCC"] < -0.010 or trial["AP"] - current["AP"] < -0.002:
                 continue
